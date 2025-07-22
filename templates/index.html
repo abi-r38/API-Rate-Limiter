@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django API Rate Limiter Demo</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Django API Rate Limiter</h1>
+        <p>Click the button below to query a rate-limited API.<br>You have an initial burst of 100 requests. The limit refills at 5 tokens per second.</p>
+        <div class="status-panel">
+            <div id="token-display" class="token-display">
+                <span id="token-count">100</span>
+                <span>Tokens Remaining</span>
+            </div>
+            <button id="api-button">Make API Request</button>
+        </div>
+        <div class="log-container">
+            <h3>Live Request Log</h3>
+            <div id="request-log"></div>
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

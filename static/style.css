@@ -1,0 +1,120 @@
+css
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  color: #111;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.status-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+}
+
+.token-display {
+  text-align: center;
+}
+
+#token-count {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0d6efd;
+  transition: color 0.3s ease-in-out;
+}
+
+.token-display span:last-child {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+#api-button {
+  background-color: #0d6efd;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#api-button:hover {
+  background-color: #0b5ed7;
+}
+
+#api-button:active {
+  transform: scale(0.98);
+}
+
+#api-button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.log-container h3 {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+#request-log {
+  background-color: #212529;
+  color: #f8f9fa;
+  height: 200px;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-y: auto;
+  font-family: "SF Mono", monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  border: 1px solid #444;
+}
+
+.log-entry {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.log-entry.success {
+  color: #198754;
+}
+
+.log-entry.error {
+  color: #dc3545;
+}
